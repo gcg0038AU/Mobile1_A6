@@ -149,6 +149,7 @@
                     <connections>
                         <outlet property="USD_field" destination="4jN-eJ-PEv" id="TLo-kZ-6n5"/>
                         <outlet property="error_label" destination="tQR-FK-BXO" id="7hW-WV-bwn"/>
+                        <segue destination="wWb-pJ-Osh" kind="presentation" identifier="toConversionResult" id="GcD-p2-K5U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -160,17 +161,17 @@
             <objects>
                 <viewController id="wWb-pJ-Osh" customClass="ConversionView" customModule="Mobile1_A6_Currency" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sKh-7e-ljA">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Z0-Xe-xwe">
-                                <rect key="frame" x="134.33333333333334" y="159" width="124.33333333333334" height="26.333333333333343"/>
+                                <rect key="frame" x="134.33333333333334" y="100" width="124.33333333333334" height="26.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="49r-Yb-xC7">
-                                <rect key="frame" x="30" y="604.66666666666663" width="333" height="183.33333333333337"/>
+                                <rect key="frame" x="30" y="628.66666666666663" width="333" height="183.33333333333337"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="Nzx-vh-3Rq">
                                         <rect key="frame" x="0.0" y="0.0" width="333" height="26.333333333333332"/>
@@ -253,6 +254,17 @@
                             <constraint firstItem="P3F-Xf-cwY" firstAttribute="trailing" secondItem="49r-Yb-xC7" secondAttribute="trailing" constant="30" id="vxu-k8-XV0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="eur_amount_label" destination="vrV-bD-nTu" id="J8p-Li-8WV"/>
+                        <outlet property="eur_heading_label" destination="lD7-Hb-BeO" id="VqV-Uv-ht5"/>
+                        <outlet property="gbp_amount_label" destination="bfD-x1-2qT" id="Xvo-Bt-B9B"/>
+                        <outlet property="gbp_heading_label" destination="Nqk-9K-OG9" id="q7C-ck-h6F"/>
+                        <outlet property="jpy_amount_label" destination="dwv-C2-5O2" id="eD1-Vl-vEv"/>
+                        <outlet property="jpy_heading_label" destination="HJ4-St-nae" id="Aue-vv-pG8"/>
+                        <outlet property="mxn_amount_label" destination="gE9-m5-87M" id="orA-90-WHv"/>
+                        <outlet property="mxn_heading_label" destination="eau-KH-Q9X" id="mu3-yX-mDB"/>
+                        <outlet property="usd_amount_label" destination="2Z0-Xe-xwe" id="2Dd-2G-3kn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Irm-vu-nay" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

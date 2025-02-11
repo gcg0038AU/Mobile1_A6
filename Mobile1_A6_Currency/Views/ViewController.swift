@@ -52,9 +52,24 @@ class ViewController: UIViewController {
             error_label.isHidden = true
             conversionLogic.setUSD(Int(USD_field.text!) ?? 0)
             conversionLogic.calcConversion()
+            self.performSegue(withIdentifier: "toConversionResult", sender:self)
         }
         else {
             error_label.isHidden = false
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "toConversionResult") {
+            let navigation = segue.destination as! ConversionView
+            navigation.usdAmount = conversionLogic.usdAmount
+            navigation.gbpSwitch = conversionLogic.gbpSwitch
+            navigation.jpySwitch = conversionLogic.jpySwitch
+            navigation.eurSwitch = conversionLogic.eurSwitch
+            navigation.mxnSwitch = conversionLogic.mxnSwitch
+            navigation.gbpAmount = conversionLogic.gbpAmount
+            navigation.jpyAmount = conversionLogic.jpyAmount
+            navigation.eurAmount = conversionLogic.eurAmount
+            navigation.mxnAmount = conversionLogic.mxnAmount
         }
     }
     func validateUSD() -> Bool {

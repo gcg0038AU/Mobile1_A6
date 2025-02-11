@@ -58,19 +58,19 @@ struct ConversionLogic {
     }
     mutating func calcGBP() {
         let raw = (Double(usdAmount) * gbpRate)
-        gbpAmount = (round(raw * 100) / 100.0)
+        gbpAmount = raw
     }
     mutating func calcJPY() {
         let raw = (Double(usdAmount) * jpyRate)
-        jpyAmount = (round(raw * 100) / 100.0)
+        jpyAmount = raw
     }
     mutating func calcEUR() {
         let raw = (Double(usdAmount) * eurRate)
-        eurAmount = (round(raw * 100) / 100.0)
+        eurAmount = raw
     }
     mutating func calcMXN() {
         let raw = (Double(usdAmount) * mxnRate)
-        mxnAmount = (round(raw * 100) / 100.0)
+        mxnAmount = raw
     }
     mutating func calcConversion() {
         if (gbpSwitch == true) {
