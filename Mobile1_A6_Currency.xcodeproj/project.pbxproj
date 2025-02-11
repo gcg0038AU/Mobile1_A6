@@ -45,8 +45,8 @@
 		8C273C022D5BF37200B3176A = {
 			isa = PBXGroup;
 			children = (
-				8C273C0D2D5BF37200B3176A /* Mobile1_A6_Currency */,
 				8C273C0C2D5BF37200B3176A /* Products */,
+				8C273C0D2D5BF37200B3176A /* Mobile1_A6_Currency */,
 			);
 			sourceTree = "<group>";
 		};
